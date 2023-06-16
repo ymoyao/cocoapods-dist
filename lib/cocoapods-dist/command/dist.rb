@@ -22,8 +22,8 @@ module Pod
 
       def self.options
         [
-          ['--tag', 'Force running `pod repo update` before install'],
-          ['--commit', 'Disallow any changes to the Podfile or the Podfile.lock during installation'],
+          ['--tag', 'show tags only'],
+          ['--commit', 'show all addtion commits'],
         ].concat(super)
       end
 
@@ -43,10 +43,11 @@ module Pod
 
         validate!
 
-        #first clone module to cache dir
+        #clone module to cache dir && fetch newest log
         cloneToCache
+        fetchGit
 
-        #second
+        #fetch updates
         outdated = Pod::Command::Outdated.parse([])
         updates = outdated.public_updates
         updates = updates.select {|subArr| subArr[0] == @name} unless updates.empty?
@@ -124,6 +125,10 @@ module Pod
         unless Dir.exist?(env_git)
           repo_clone(source_pod,env_cache)
         end
+      end
+
+      def fetchGit
+          Dir.chdir(env_git) { git! ['fetch'] }
       end
 
       def repo_clone(source, path)
