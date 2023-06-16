@@ -13,10 +13,11 @@ module Pod
       extend Executable
       executable :git
 
-      self.summary = 'show the module diff message'
+      self.summary = 'a cocoapods plugin to display particular component outdated information In a xcode project.'
 
       self.description = <<-DESC
-      --tag: show the diffrent on tags
+      --tag: show tags only
+      --commit: show all addtion commits
       DESC
 
       def self.options
