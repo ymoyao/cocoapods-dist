@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = CocoapodsDist::VERSION
   spec.authors       = ['youhui']
   spec.email         = ['developer_yh@163.com']
-  spec.description   = %q{A short description of cocoapods-dist.}
-  spec.summary       = %q{A longer description of cocoapods-dist.}
-  spec.homepage      = 'https://github.com/EXAMPLE/cocoapods-dist'
+  spec.description   = %q{a cocoapods plugin to display particular component outdated information In a xcode project.}
+  spec.summary       = %q{--tag: show tags only; --commit: show all addtion commits.}
+  spec.homepage      = 'https://github.com/ymoyao/cocoapods-dist'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files`.split($/)
