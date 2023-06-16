@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.name          = 'cocoapods-dist'
   spec.version       = CocoapodsDist::VERSION
   spec.authors       = ['youhui']
-  spec.email         = ['youhui@babybus.com']
+  spec.email         = ['developer_yh@163.com']
   spec.description   = %q{A short description of cocoapods-dist.}
   spec.summary       = %q{A longer description of cocoapods-dist.}
   spec.homepage      = 'https://github.com/EXAMPLE/cocoapods-dist'

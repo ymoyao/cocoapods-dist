@@ -1,6 +1,6 @@
 # cocoapods-dist
 
-A description of cocoapods-dist.
+
 
 ## Installation
 
@@ -8,4 +8,7 @@ A description of cocoapods-dist.
 
 ## Usage
 
-    $ pod spec dist POD_NAME
+    $ pod spec dist POD_NAME [--tag|--commit]
+
+
+
